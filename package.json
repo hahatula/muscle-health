@@ -1,0 +1,11 @@
+{
+  "name": "menow-muscle-health",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Muscle Health technology licensing landing page",
+  "scripts": {
+    "dev": "python3 -m http.server 4178 --bind 127.0.0.1",
+    "check": "node --check app.js && node --check webflow/muscle-health.js",
+    "build:webflow": "python3 scripts/build-webflow.py"
+  }
+}

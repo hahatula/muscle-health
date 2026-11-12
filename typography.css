@@ -1,0 +1,30 @@
+/* typography.css — Muscle Health landing styles. */
+:root { --type-heading: clamp(34px, 3.65vw, 52px); --type-subheading: 20px; --type-body: 16px; --type-label: 12px; --type-action: 14px; --ink: var(--navy); --muted: var(--navy); --paper: #fff; --cream: #fff; }
+body { color: var(--navy); }
+.science { background: rgb(255, 255, 255); color: var(--navy); }
+ .closing,  footer { color: rgb(255, 255, 255); }
+:is(.science, .evidence, .closing) h2 { font-size: var(--type-heading); font-weight: 500; line-height: 1.2; letter-spacing: -0.045em; }
+.hero-editorial .hero-description { font-size: var(--type-body); font-weight: 400; line-height: 1.75; letter-spacing: 0px; color: inherit; }
+ .hero-facts .unified-facts li,  .footer-inner,  .nav nav { font-size: var(--type-label); font-weight: 400; line-height: 1.6; letter-spacing: 0px; color: inherit; }
+.button .primary-label,  .nav .button,  .button { font-size: var(--type-action); font-weight: 500; line-height: 1.5; letter-spacing: 0.035em; }
+.hero-editorial .hero-description,  .footer-inner { color: rgb(255, 255, 255); }
+@media (max-width: 700px) {
+:root { --type-heading: 34px; --type-body: 14px; --type-action: 12px; }
+}
+.context-label { font-size: var(--type-body); font-weight: 400; line-height: 1.75; letter-spacing: 0px; color: inherit; }
+.context-label,  .science .context-label { font-size: var(--type-label); font-weight: 400; line-height: 1.5; letter-spacing: 0px; }
+.science .context-label { color: var(--navy); }
+:is(.section-light, .section-dark) h2 { font-size: var(--type-heading); font-weight: 500; line-height: 1.2; letter-spacing: -0.045em; }
+ .faq summary { font-size: var(--type-subheading); font-weight: 500; line-height: 1.4; letter-spacing: -0.025em; }
+.body-copy p,  .faq details > p { font-size: var(--type-body); font-weight: 400; line-height: 1.75; letter-spacing: 0px; color: inherit; }
+.partner-topics { font-size: var(--type-label); font-weight: 400; line-height: 1.5; letter-spacing: 0px; }
+.section-light .context-label { color: var(--navy); }
+h1,  h2,  h3 { text-transform: uppercase; }
+@font-face { font-family: Poppins; src: url("assets/fonts/Poppins-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+.closing-description { font-size: var(--type-body); font-weight: 400; line-height: 1.75; letter-spacing: 0px; color: rgb(255, 255, 255); }
+.advantage-grid h3 { font-size: var(--type-subheading); font-weight: 500; line-height: 1.4; letter-spacing: -0.025em; }
+ .advantage-grid p { font-size: var(--type-body); font-weight: 400; line-height: 1.75; letter-spacing: 0px; color: inherit; }
+h1,  h2,  h3 { text-wrap: balance; }
+p,  li,  summary { text-wrap: pretty; }
+.ip-factory h3 { font-size: var(--type-subheading); font-weight: 500; line-height: 1.4; letter-spacing: -0.025em; }
+.ip-factory p:not(.context-label) { font-size: var(--type-body); font-weight: 400; line-height: 1.75; letter-spacing: 0px; }

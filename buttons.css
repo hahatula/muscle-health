@@ -1,0 +1,101 @@
+/* buttons.css — Muscle Health landing styles. */
+:root { --gold-surface-gradient: radial-gradient(ellipse at 100% 85%,#e88383 0%,transparent 58%),radial-gradient(ellipse at 10% 0%,#fff0eb 0%,transparent 58%),linear-gradient(110deg,#e98368,#ffc0ad 55%,#e98368); }
+body { --cta-ink: #09233c; --cta-fill: radial-gradient(ellipse at 45% 110%,#fff 0%,transparent 55%),radial-gradient(ellipse at 0% 0%,#ffd0bf 0%,transparent 65%),linear-gradient(110deg,#e98368,#ffe1d9 65%,#e88383); --cta-primary-ring: linear-gradient(115deg,#0d2d4d,#e98368 70%,#e88383); --cta-secondary: #fff; --cta-secondary-ink: #0d2d4d; --cta-ring: linear-gradient(115deg,#0d2d4d,#40c6df 40%,#e98368 80%,#e98368); --cta-halo: #e9836838; }
+:is(.hero, .header, .evidence, .section-dark, .closing, .science-footer) { --cta-primary-ring: var(--cta-ring); --cta-ink: #09233c; --cta-fill: radial-gradient(ellipse at 45% 110%,#fff 0%,transparent 55%),radial-gradient(ellipse at 0% 0%,#ffd0bf 0%,transparent 65%),linear-gradient(110deg,#e98368,#ffe1d9 65%,#e88383); --cta-secondary: #09233cdd; --cta-secondary-ink: #fff; --cta-ring: linear-gradient(115deg,#0d2d4d,#e98368 70%,#e88383); --cta-halo: #e9836838; }
+body .button.button {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 30px;
+  min-height: 54px;
+  max-width: 100%;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--cta-fill) padding-box,var(--cta-primary-ring) border-box;
+  color: var(--cta-ink);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s ease,filter .45s ease,background-position .6s ease;
+  background-size: 140% 140%,140% 140%,100% 100%,100% 100%;
+  background-position: 25% 50%,25% 50%,center,center;
+  background-clip: padding-box,padding-box,padding-box,border-box;
+}
+body .button.button::before, body .button.button::after {
+  content: none !important;
+}
+body .button.button .primary-label {
+  position: relative;
+  z-index: 1;
+  color: inherit;
+  letter-spacing: 0;
+  font-weight: 500;
+  text-shadow: none;
+}
+body .button.button-secondary {
+  color: var(--cta-secondary-ink);
+  background: linear-gradient(var(--cta-secondary),var(--cta-secondary)) padding-box,var(--cta-ring) border-box;
+  box-shadow: none;
+}
+body .button.button:is(:hover,:focus-visible) {
+  transform: translateY(-3px);
+  filter: brightness(1.06);
+  box-shadow: none;
+}
+body .button.button-secondary::after {
+  content: "" !important;
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at 10% 20%,#40c6df40,transparent 65%),radial-gradient(ellipse at 80% 130%,#e9836866,transparent 70%);
+  opacity: 0;
+  transform: none;
+  pointer-events: none;
+  transition: opacity .45s ease;
+  z-index: 0;
+}
+body .button.button-secondary:is(:hover,:focus-visible)::after {
+  opacity: 1;
+}
+body .button.button:is(:hover,:focus-visible) {
+  background-position: 75% 65%,60% 50%,center,center;
+}
+body .button.button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
+}
+body .button.button:active {
+  transform: translateY(-1px);
+}
+body .button .cta-arrow {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+  transition: transform .45s cubic-bezier(.2,.7,.2,1);
+}
+body .button:hover .cta-arrow {
+  transform: translate(2px,-2px);
+}
+@media(max-width:700px) {
+body .button.button {
+    padding: 14px 24px;
+    min-height: 48px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+body .button.button, body .button .cta-arrow {
+    transition: none;
+  }
+body .button.button:is(:hover,:focus-visible), body .button:hover .cta-arrow {
+    transform: none;
+  }
+}

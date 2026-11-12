@@ -1,0 +1,15 @@
+WEBFLOW HANDOFF — MUSCLE HEALTH
+
+1. Run npm run build:webflow and npm run check after source changes. Commit the regenerated webflow/ files with the source.
+2. Host webflow/ and assets/ on an HTTPS static host, retaining their relative folders. Confirm webflow/muscle-health.js loads.
+3. Replace YOUR-ASSET-HOST in webflow/embed.html with the real hosting address. Paste that small embed into a full-width Webflow Code Embed; keep its div and script adjacent, in that order.
+4. Remove any previous Muscle Health embed or global CSS/JS. Use a parent section with no padding or max-width and visible overflow. This page includes its own header/footer.
+5. Publish to Webflow staging. Check navigation, mobile menu, FAQ, video, images and booking links. Set title, description and indexing in Webflow page settings before production publication.
+
+The bundle uses Shadow DOM to isolate its styles from Webflow. muscle-health.css is a readable generated copy already included in muscle-health.js; do not load it separately. Assets resolve relative to the hosted script. Cross-origin fonts require CORS; the site's content security policy must allow the asset host and generated styles.
+
+Preview locally at /webflow/preview.html. Edit root source files, not generated bundles. Rebuild and republish after each change; update the embed URL version query to refresh caches if needed. The production hosting URL has not been configured or deployed.
+
+Microsoft Bookings links are documented in microsoft-bookings.md.
+
+Isolation verified at desktop and mobile widths against conflicting global element/class styles. Keep the Shadow DOM embed intact: copying its HTML/CSS directly into Webflow removes this protection. Host page layout can still constrain the outer embed; use the full-width parent described above.

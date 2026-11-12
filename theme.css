@@ -1,0 +1,113 @@
+/* theme.css — Muscle Health landing styles. */
+:root { --accent: #e98368; --gold: var(--accent); }
+.hero-stage,  .closing { background: radial-gradient(ellipse at 85% 30%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 60%),linear-gradient(135deg,#09233c,#0d2d4d); }
+.hero-editorial h1 { max-width: 100%; font-size: clamp(38px, 4.8vw, 68px); }
+.hero-editorial h1 span { white-space: normal; }
+.hero-editorial .hero-copy { max-width: 980px; }
+.hero-editorial .hero-text-panel { width: 100%; }
+.portfolio-faq { margin-top: 48px; }
+@media (max-width: 700px) {
+.hero-editorial h1 { font-size: 38px; }
+}
+.hero-editorial h1 span { color: var(--accent); }
+.hero-facts .unified-facts li { background: none; border: 0px; border-radius: 0px; padding: 0px; }
+.hero-facts .unified-facts { gap: 12px 24px; }
+.hero-editorial .hero-copy { width: 100%; padding: 140px 0px 150px; }
+.hero-editorial .hero-text-panel { padding: 0px; background: none; border: 0px; backdrop-filter: none; }
+.hero-editorial .hero-text-panel h1 { font-size: clamp(40px, 4.8vw, 70px); line-height: 1.12; }
+.hero-editorial .hero-description { max-width: 620px; }
+.hero-stage .scene-footer { bottom: 28px; }
+.hero-facts .unified-facts li { padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.19); border-radius: 7px; background: rgba(9, 35, 60, 0.8); }
+.market-introduction { display: grid; align-items: start; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 40px; margin-top: 36px; }
+.market-introduction.body-copy > p { margin: 0px; }
+main > section.muscle-closing { color: var(--navy-deep); padding-block: 100px; }
+.muscle-closing .closing-inner { display: block; }
+.muscle-closing-copy { width: 52%; position: relative; }
+.muscle-closing h2 { font-size: clamp(34px, 3.6vw, 52px); }
+.muscle-closing .context-label { color: var(--navy-deep); }
+.muscle-closing .closing-description { max-width: 480px; margin: 28px 0px; }
+@media (max-width: 900px) {
+main > section.muscle-closing { background-position: calc(100% + 120px) center; }
+}
+@media (max-width: 700px) {
+.hero-editorial .hero-copy { padding: 125px 0px 24px; }
+.hero-editorial .hero-text-panel h1 { font-size: clamp(36px, 8vw, 48px); }
+.hero-stage .scene-footer { position: relative; bottom: auto; padding-block: 24px; }
+.market-introduction { grid-template-columns: 1fr; gap: 24px; }
+main > section.muscle-closing { padding: 60px 0px 350px; background-size: auto 380px; background-position: right bottom; }
+.muscle-closing-copy { width: 100%; }
+.muscle-closing h2 { font-size: 36px; }
+}
+.muscle-closing .closing-description { color: var(--navy-deep); }
+.muscle-closing .context-label { background: none; border: 0px; padding: 0px; }
+@media (max-width: 700px) {
+.hero-editorial .hero-stage { display: block; }
+.muscle-closing h2 br { display: block; }
+}
+.application-story-grid { display: grid; grid-template-columns: minmax(0px, 1fr) minmax(0px, 1.15fr); gap: 72px; align-items: start; }
+.application-story-visual { overflow: hidden; border-radius: 28px; background: linear-gradient(135deg, rgb(255, 244, 239), rgb(246, 195, 180)); }
+.application-story-visual img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.application-story h2 { font-size: clamp(32px, 3.3vw, 48px); margin: 24px 0px; }
+.application-story-copy > p:not(.context-label) { font-size: var(--type-body); }
+.application-opportunity { margin-top: 32px; padding: 32px; border: 0px; border-radius: 20px; background: var(--gold-surface-gradient); color: var(--navy); }
+.application-story-copy > .context-label { display: inline-block; margin: 0px; padding: 8px 12px; border: 1px solid var(--accent); border-radius: 7px; background: rgba(255, 255, 255, 0.65); color: var(--navy); font-size: var(--type-label); font-weight: 400; line-height: 1.5; letter-spacing: normal; text-transform: none; }
+.application-opportunity h3 { font-size: var(--type-subheading); margin-bottom: 12px; }
+.application-opportunity p { font-size: var(--type-body); margin: 0px; }
+#weight-management,  #sports-recovery { background: rgb(255, 255, 255); }
+#weight-management .application-story-visual { order: 2; }
+main > section.application-story { padding-block: 100px; }
+.science-portfolio { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 36px; }
+.science-portfolio.body-copy > p { margin: 0px; }
+main > section.muscle-closing { color: white; }
+.muscle-closing .closing-description,  .muscle-closing .context-label { color: white; }
+@media (max-width: 900px) {
+.application-story-grid { gap: 36px; }
+main > section.muscle-closing { background-position: calc(100% + 120px) center; }
+}
+@media (max-width: 700px) {
+.application-story-grid,  .science-portfolio { grid-template-columns: 1fr; gap: 32px; }
+.application-story-visual { order: 2; }
+.application-story-visual img { aspect-ratio: 4 / 3; }
+main > section.application-story { padding-block: 64px; }
+main > section.muscle-closing { background-size: auto 380px; background-position: right bottom; }
+}
+main > section.muscle-closing { position: relative; background: rgb(9, 35, 60); }
+.muscle-closing::before { content: ""; display: block; position: absolute; inset: 0px; background: url("assets/muscle-woman-dumbbell-natural.png") right center / auto 100% no-repeat; mask-image: linear-gradient(90deg, transparent 25%, black 65%); pointer-events: none; }
+.muscle-closing .closing-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+.muscle-closing::before { background-position: calc(100% + 120px) center; }
+}
+@media (max-width: 700px) {
+.muscle-closing::before { top: auto; height: 380px; background-size: auto 380px; background-position: right bottom; mask-image: none; }
+}
+.hero-editorial .hero-stage { display: flex; align-items: center; min-height: max(760px, 100dvh); background: var(--navy-deep); }
+.hero-scenes { background: url("assets/muscle-health-poster.jpg?v=3") center center / cover no-repeat; }
+.hero-film { position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+.hero-film.has-frame { opacity: 1; }
+.hero-editorial .hero-copy { max-width: 800px; padding: 140px 0px 160px; }
+.hero-editorial .hero-text-panel { padding: 32px; border: 1px solid rgba(255, 255, 255, 0.125); border-radius: 18px; background: rgba(9, 35, 60, 0.76); backdrop-filter: blur(8px); }
+.hero-editorial .hero-text-panel h1 { margin: 24px 0px; }
+.hero-editorial .hero-description { max-width: 800px; }
+.hero-editorial .hero-actions { margin-top: 28px; }
+.hero-stage .scene-footer { position: absolute; bottom: 28px; z-index: 3; }
+.hero-film-control { flex: 0 0 auto; }
+.hero-film-control .pause-icon { display: none; }
+.hero-film-control[data-playing="true"] .pause-icon { display: block; }
+.hero-film-control[data-playing="true"] .play-icon { display: none; }
+@media (max-width: 700px) {
+.hero-editorial .hero-copy { padding: 110px 0px 200px; }
+.hero-editorial .hero-text-panel { padding: 24px; }
+.hero-editorial .hero-text-panel h1 { font-size: clamp(32px, 8vw, 44px); }
+.hero-editorial .scene-footer { padding-block: 0px; }
+.hero-film { object-position: 60% center; }
+}
+@media (max-width: 700px) {
+.application-opportunity { padding: 24px; }
+}
+#weight-management .application-story-visual img,  #sports-recovery .application-story-visual img { transform: scaleX(-1); }
+@media (max-width: 700px) {
+.hero-facts .mobile-hidden-fact { display: none; }
+#sports-recovery .application-story-visual img { object-position: center top; }
+main > section.muscle-closing { padding-bottom: 420px; }
+.muscle-closing::before { background-position: calc(100% + 24px) bottom; mask-image: linear-gradient(transparent, black 2%); }
+}
