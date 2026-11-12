@@ -1,5 +1,5 @@
 /* buttons.css — Muscle Health landing styles. */
-:root { --gold-surface-gradient: radial-gradient(ellipse at 100% 85%,#e88383 0%,transparent 58%),radial-gradient(ellipse at 10% 0%,#fff0eb 0%,transparent 58%),linear-gradient(110deg,#e98368,#ffc0ad 55%,#e98368); }
+:root { --gold-surface-gradient: radial-gradient(ellipse at 0% 0%,#e88383 0%,transparent 60%),linear-gradient(165deg,#e98368 0%,#ffc0ad 55%,#fff0eb 100%); }
 body { --cta-ink: #09233c; --cta-fill: radial-gradient(ellipse at 45% 110%,#fff 0%,transparent 55%),radial-gradient(ellipse at 0% 0%,#ffd0bf 0%,transparent 65%),linear-gradient(110deg,#e98368,#ffe1d9 65%,#e88383); --cta-primary-ring: linear-gradient(115deg,#0d2d4d,#e98368 70%,#e88383); --cta-secondary: #fff; --cta-secondary-ink: #0d2d4d; --cta-ring: linear-gradient(115deg,#0d2d4d,#40c6df 40%,#e98368 80%,#e98368); --cta-halo: #e9836838; }
 :is(.hero, .header, .evidence, .section-dark, .closing, .science-footer) { --cta-primary-ring: var(--cta-ring); --cta-ink: #09233c; --cta-fill: radial-gradient(ellipse at 45% 110%,#fff 0%,transparent 55%),radial-gradient(ellipse at 0% 0%,#ffd0bf 0%,transparent 65%),linear-gradient(110deg,#e98368,#ffe1d9 65%,#e88383); --cta-secondary: #09233cdd; --cta-secondary-ink: #fff; --cta-ring: linear-gradient(115deg,#0d2d4d,#e98368 70%,#e88383); --cta-halo: #e9836838; }
 body .button.button {
